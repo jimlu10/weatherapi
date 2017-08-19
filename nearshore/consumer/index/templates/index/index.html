@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="{% url 'send_data' %}" method="post">
+  {% csrf_token %}
+  City Name: {{ params.name }}
+  <br>
+
+  <input type="text" name="city_name" value="">
+  <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
